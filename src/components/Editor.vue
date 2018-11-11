@@ -1,14 +1,22 @@
 <template>
   <div class="editor">
-    <button>エディター画面</button>
+    <h1>エディター画面</h1>
+    <span>{{ user }}</span>
+    <button @click="logout">ログアウト</button>
   </div>
 </template>
 
 <script>
   export default {
     name: "editor",
+    props: ["user"],
     data() {
       return {};
+    },
+    methods: {
+      logout: function() {
+        firebase.auth().signOut();
+      }
     }
   };
 </script>
