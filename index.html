@@ -6,6 +6,19 @@
   </head>
   <body>
     <div id="app"></div>
-    <script src="/dist/build.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/5.5.8/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyAYQaL6GkI-fjbyljO69sLIMVV8fSb9h5w",
+        authDomain: "mymarkdown-ba482.firebaseapp.com",
+        databaseURL: "https://mymarkdown-ba482.firebaseio.com",
+        projectId: "mymarkdown-ba482",
+        storageBucket: "mymarkdown-ba482.appspot.com",
+        messagingSenderId: "703843419645"
+      };
+      firebase.initializeApp(config);
+    </script>
+    <script src="./build.js"></script>
   </body>
 </html>
